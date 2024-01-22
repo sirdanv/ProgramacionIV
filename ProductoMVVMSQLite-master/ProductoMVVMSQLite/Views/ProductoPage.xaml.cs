@@ -9,9 +9,4 @@ public partial class ProductoPage : ContentPage
 		InitializeComponent();
 		BindingContext = new ProductoViewModel();
 	}
-
-    private void listaProductos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-    {
-
-    }
 }
