@@ -5,11 +5,11 @@
              Title="Detalles del Producto">
 
 	<VerticalStackLayout>
-		<Image Source="{Binding ImagenProducto}" HeightRequest="200" HorizontalOptions="Center"/>
+	
 		<Label Text="{Binding Nombre}" FontSize="24" />
 		<Label Text="{Binding Cantidad}" FontSize="20" />
 		<Label Text="{Binding Descripcion}" FontSize="18" />
-		<!-- Puedes agregar más elementos según sea necesario -->
+		
 	</VerticalStackLayout>
 
 </ContentPage>

@@ -27,7 +27,6 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal">
-                        <Image Source="{Binding ImagenProducto}" HeightRequest="50" WidthRequest="100"/>
                         <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Nombre}" VerticalOptions="Start" FontSize="20"/>
                             <Label Text="{Binding Cantidad}" VerticalOptions="End" FontSize="20"/>

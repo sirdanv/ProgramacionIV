@@ -18,12 +18,12 @@ namespace ProductoMVVMSQLite.ViewModels
         public string Nombre { get; set; }
         public string Cantidad { get; set; }
         public string Descripcion { get; set; }
-        public ImageSource ImagenProducto { set; get; }
+        //public ImageSource ImagenProducto { set; get; }
 
         private int _idProducto = 0;
-        private string imagen { set; get; }
+        //private string imagen { set; get; }
         private Producto ProductoEncontrado { get; set; }
-        private string _imagenOriginal;
+        //private string _imagenOriginal;
 
 
         public NuevoProductoViewModel()
@@ -39,10 +39,10 @@ namespace ProductoMVVMSQLite.ViewModels
             Descripcion = ProductoEncontrado.Descripcion;
             Cantidad = ProductoEncontrado.Cantidad.ToString();
 
-            // Guarda la imagen original
+            /* Guarda la imagen original
             _imagenOriginal = ProductoEncontrado.Imagen;
 
-            ImagenProducto = ImageSource.FromFile(ProductoEncontrado.Imagen);
+            ImagenProducto = ImageSource.FromFile(ProductoEncontrado.Imagen);*/
 
 
 
@@ -58,7 +58,7 @@ namespace ProductoMVVMSQLite.ViewModels
                         Nombre = Nombre,
                         Descripcion = Descripcion,
                         Cantidad = Int32.Parse(Cantidad),
-                        Imagen = imagen ?? _imagenOriginal 
+                        //Imagen = imagen ?? _imagenOriginal 
                     };
                     App.productoRepository.Add(producto);
                 }
@@ -69,10 +69,10 @@ namespace ProductoMVVMSQLite.ViewModels
                     ProductoEncontrado.Descripcion = Descripcion;
 
  
-                    if (!string.IsNullOrEmpty(imagen))
+                    /*if (!string.IsNullOrEmpty(imagen))
                     {
                         ProductoEncontrado.Imagen = imagen;
-                    }
+                    }*/
 
                     App.productoRepository.Update(ProductoEncontrado);
                 }
@@ -94,8 +94,8 @@ namespace ProductoMVVMSQLite.ViewModels
                         using Stream source = await photo.OpenReadAsync();
                         using FileStream localFile = File.OpenWrite(localFilePath);
                         Console.WriteLine(localFilePath);
-                        imagen = localFilePath;
-                        ImagenProducto = ImageSource.FromFile(imagen);
+                        /*imagen = localFilePath;
+                        ImagenProducto = ImageSource.FromFile(imagen);*/
                         await source.CopyToAsync(localFile);
                     }
                 }
