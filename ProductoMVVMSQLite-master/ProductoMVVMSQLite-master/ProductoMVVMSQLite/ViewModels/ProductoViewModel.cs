@@ -38,7 +38,6 @@ namespace ProductoMVVMSQLite.ViewModels
                 if (ProductoSeleccionado != null)
                 {
                     int IdProducto = ProductoSeleccionado.IdProducto;
-                    //ProductoSeleccionado = null;
                     await App.Current.MainPage.Navigation.PushAsync(new NuevoProductoPage(IdProducto));
                     ProductoSeleccionado = null;
                 }
